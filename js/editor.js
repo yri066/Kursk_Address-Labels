@@ -119,7 +119,8 @@ function resizeForm() {
 $(function () {
 	loadExcel('Ulitsy_sootvetstvie.xlsx', '.Ulitsy_sootvetstvie');
 	loadExcel('ulitsy_goroda_dlya_generatora_tablichek.xlsx', '.ulitsy_goroda');
-	console.log(`Работу выполнили студенты ЮЗГУ группы ПО-71б: 
+	/*console.log(`
+Работу выполнили студенты ЮЗГУ группы ПО-71б: 
 Кузнецов Ю.С.
 Бунина В.В.
 Ревин А.А.
@@ -130,7 +131,8 @@ $(function () {
 Черных Е.В.
 Кобелев Д.Ю.
 Кобелев А.С.
-	2020г.`);
+	2020г.
+`);*/
 });
 
 
@@ -326,25 +328,25 @@ function streetName(doc) {
 	if ($("#oldName").val() == '' || $("#oldName").val() == ' ') {
 		
 		doc.setFontSize(120.1);
-		doc.setFont('MozerSemiBold');
+		doc.setFont('Mozer-SemiBold');
 		doc.lstext($("#fieldStreet").val(), 37, 216, 1.75);
 		
 		doc.setFontSize(320.1);
-		doc.setFont('MozerSemiBold');
+		doc.setFont('Mozer-SemiBold');
 		doc.lstext($("#fieldStreetName").val(), 37, 139.3, intervalStreetName);
 	}
 	else {
 		
 		doc.setFontSize(128.1);
-		doc.setFont('MozerSemiBold');
+		doc.setFont('Mozer-SemiBold');
 		doc.lstext($("#fieldStreet").val(), 33, 214.5, 1.6);
 		
 		doc.setFontSize(92.1);
-		doc.setFont('MozerThin');
+		doc.setFont('Mozer-Thin');
 		doc.lstext($("#oldName").val(), 33, 160, 1.3);
 		
 		doc.setFontSize(320);
-		doc.setFont('MozerSemiBold');
+		doc.setFont('Mozer-SemiBold');
 		doc.lstext($("#fieldStreetName").val(), 33, 111, intervalStreetName);
 	}
 
@@ -385,7 +387,7 @@ function streetNameNumber(doc, width) {
 	doc.setFillColor(241, 240, 234);
 	doc.roundedRect(width - streetNumber + 10, 10, streetNumber - 20, 230, 10, 10, "FD");
 	
-	doc.setFont('MozerSemiBold');
+	doc.setFont('Mozer-SemiBold');
 	
 	doc.setFontSize(79.4);
 	doc.writeText(width - 66, 231.2, $("#next-number").val(), { width: 0, spacing: 1.2 });

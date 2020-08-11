@@ -248,3 +248,12 @@ input:focus {
 .dark-theme #kladr_autocomplete li.active{
 	background-color:#919191;
 }
+.href{
+	display: block;
+    margin: 1% auto;
+    width: 200px;
+	font-family: 'Gilroy';
+	color:white;
+	font-size: 17px;
+    clear: unset;
+}
